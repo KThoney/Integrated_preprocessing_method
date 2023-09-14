@@ -1,2 +1,6 @@
-# Integrated_preprocessing_method
-Integrated Preprocessing of Multitemporal Very-High-Resolution Satellite Images
+This code provides the "Integrated Preprocessing method for multi-temporal very high-resolution satellite images"
+![image](https://github.com/KThoney/Integrated_preprocessing_method/assets/106787991/7e5fb816-0dd6-46e5-a412-1ca1f2b1799e)
+
+Figure 1 shows the workflow of the integrated automatic preprocessing method proposed herein. The conjugate points (CPs) were extracted between the reference and sensed images using the speeded-up robust feature (SURF) algorithm. The outliers included in the extracted CPs were eliminated using affine transformation coefficients and root mean square error (RMSE) values. Based on the CPs that underwent outlier elimination, the improved piecewise linear transformation model (IPL) was constructed for warping the sensed image to the reference image’s coordinates. Subsequently, the CPs extracted from vegetation areas were eliminated using the NDVI mask. The integrated normalization Z-score (INZ-score) image was generated for pseudo-invariant features (PIFs) extraction performed by considering the radiometric characteristics of all bands based on the CPs. The PIFs were extracted by applying the region-growing algorithm centered around the pixels of the INZ-score image corresponding to CPs. Finally, RRN was conducted by constructing a linear regression using the extracted PIFs.
+
+![image](https://github.com/KThoney/Integrated_preprocessing_method/assets/106787991/96a1084e-ea34-4912-afba-b779e5bec82b)
